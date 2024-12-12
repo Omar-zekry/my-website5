@@ -1,53 +1,46 @@
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع فريلانس</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Hub</title>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body class="dark-mode">
-  <header>
-    <h1>مرحبًا بك في موقع الفريلانس</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#services">الخدمات</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>
+    <header>
+        <h1>Welcome to Freelance Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/add_article">Add Article</a></li>
+                <li><a href="/add_course">Add Course</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>موقعنا يقدم خدمات رائعة للمستقلين في مختلف المجالات.</p>
-  </section>
+    <section id="articles">
+        <h2>Articles</h2>
+        <ul>
+            {% for article in articles %}
+                <li><strong>{{ article[1] }}</strong>: {{ article[2] }}</li>
+            {% endfor %}
+        </ul>
+    </section>
 
-  <section id="services">
-    <h2>الخدمات</h2>
-    <ul>
-      <li>تصميم مواقع الإنترنت</li>
-      <li>تطوير البرمجيات</li>
-      <li>كتابة المحتوى</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>اتصل بنا</h2>
-    <form>
-      <label for="name">الاسم:</label>
-      <input type="text" id="name" name="name">
-      <br>
-      <label for="email">البريد الإلكتروني:</label>
-      <input type="email" id="email" name="email">
-      <br>
-      <input type="submit" value="إرسال">
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 جميع الحقوق محفوظة.</p>
-  </footer>
+    <section id="courses">
+        <h2>Courses</h2>
+        <ul>
+            {% for course in courses %}
+                <li><strong>{{ course[1] }}</strong>: {{ course[2] }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Freelance Hub</p>
+    </footer>
 </body>
 </html>
+    
