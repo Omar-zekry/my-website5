@@ -1,15 +1,16 @@
 
-body {
+/* General body styling for Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #eaeaea;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     direction: rtl;
 }
 
 header {
     background-color: #333;
-    color: white;
-    padding: 10px 0;
+    color: #eaeaea;
+    padding: 20px;
     text-align: center;
 }
 
@@ -24,21 +25,43 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: #eaeaea;
     text-decoration: none;
+    font-weight: bold;
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
-    color: white;
+    color: #eaeaea;
+}
+
+form input[type="text"], form input[type="email"], form input[type="submit"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    background-color: #444;
+    color: #eaeaea;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
